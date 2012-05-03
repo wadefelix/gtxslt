@@ -1,0 +1,4 @@
+<!ELEMENT testsuites (testsuite*)>
+<!ELEMENT testsuite (testcase*)>
+<!ELEMENT testcase ANY>
+<!ELEMENT failure EMPTY>
