@@ -23,6 +23,8 @@
         			</tr>
 		        	<xsl:apply-templates/>
         		</table>
+		        <p/>
+        		<hr align="center" width="90%" color="maroon" />
 			</body>
 		</html>
 	</xsl:template>
@@ -34,6 +36,20 @@
 			</td>
 		</tr>
 		<xsl:apply-templates/>
+		<tr bgcolor="#ffffc0">
+			<td width="25%">
+				tests: <xsl:value-of select="@tests"/>
+			</td>
+			<td width="25%">
+				disabled: <xsl:value-of select="@disabled"/>
+			</td>
+			<td width="25%">
+				failures: <xsl:value-of select="@failures"/>
+			</td>
+			<td width="25%">
+				errors: <xsl:value-of select="@errors"/>
+			</td>
+		</tr>
 	</xsl:template>
 
 	<xsl:template match="testcase">
