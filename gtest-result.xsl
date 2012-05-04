@@ -71,13 +71,25 @@
 	</xsl:template>
 
 	<xsl:template match="failure">
-		<tr>
-			<td colspan="2" bgcolor="#ff9090">
-			    <xsl:value-of select="@message"/>
-			</td>
-			<td colspan="2" bgcolor="#ff9090">
-			    <xsl:value-of select="."/>
-			</td>
-		</tr>
+		<tr><td colspan="4"  bgcolor="#ff9090">
+				<table width="100%">
+					<tr>
+						<th width="15%"> File Name </th>
+						<td width="50%" bgcolor="#e0eee0">
+							<xsl:value-of select="substring-before(.,':')"/>
+						</td>
+						<th width="20%"> Line Number </th>
+						<td width="10%" bgcolor="#e0eee0">
+							<xsl:value-of select='substring-after(substring-before(.,"&#x000A;"),":")'/>
+						</td>
+					</tr>
+					<tr>
+						<th width="15%"> message </th>
+						<td colspan="3" width="85%" bgcolor="#e0eee0">
+							<xsl:value-of select="@message"/>
+						</td>
+					</tr>
+				</table>
+		</td></tr>
 	</xsl:template>
 </xsl:stylesheet>
