@@ -19,7 +19,7 @@ To use it, please apply this patch:
                                                       const UnitTest& unit_test) {
         fprintf(out, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
     +   fprintf(out, "<?xml-stylesheet type=\"text/xsl\" href=\"gtest-result.xsl\" ?>\n");
-    +   fprintf(out, "<!DOCTYPE CUNIT_TEST_RUN_REPORT SYSTEM \"gtest-result.dtd\">\n");
+    +   fprintf(out, "<!DOCTYPE testsuites SYSTEM \"gtest-result.dtd\">\n");
         fprintf(out,
                 "<testsuites tests=\"%d\" failures=\"%d\" disabled=\"%d\" "
                 "errors=\"0\" time=\"%s\" ",
