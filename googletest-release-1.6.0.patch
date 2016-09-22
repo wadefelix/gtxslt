@@ -1,0 +1,13 @@
+diff --git a/src/gtest.cc b/src/gtest.cc
+index 904d9d7..80d439e 100644
+--- a/src/gtest.cc
++++ b/src/gtest.cc
+@@ -3293,6 +3293,8 @@ void XmlUnitTestResultPrinter::PrintXmlTestCase(FILE* out,
+ void XmlUnitTestResultPrinter::PrintXmlUnitTest(FILE* out,
+                                                 const UnitTest& unit_test) {
+   fprintf(out, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
++  fprintf(out, "<?xml-stylesheet type=\"text/xsl\" href=\"gtest-result.xsl\" ?>\n");
++  fprintf(out, "<!DOCTYPE testsuites SYSTEM \"gtest-result.dtd\">\n");
+   fprintf(out,
+           "<testsuites tests=\"%d\" failures=\"%d\" disabled=\"%d\" "
+           "errors=\"0\" time=\"%s\" ",
