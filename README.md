@@ -18,9 +18,19 @@ How To Use
 ```bash
 # apply patch
 cd googletest
-git apply googletest-release-1.8.0.patch
-# run project
-./google-test-examples_test --gtest_output=xml:./test_detail.xml
+git apply googletest-release-1.10.0.patch
+
+# cd googletest
+cd googletest
+
+# CMake Build Samples Project
+cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DCMAKE_MAKE_PROGRAM=make -Dgtest_build_samples=ON .
+
+# Build Samples
+make
+
+# run sample
+./sample1_unittest.exe --gtest_output=xml:./sample1_unittest.xml
 ```
 
 Enjoy it!

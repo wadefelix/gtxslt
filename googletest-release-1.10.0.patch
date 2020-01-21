@@ -1,0 +1,13 @@
+diff --git a/googletest/src/gtest.cc b/googletest/src/gtest.cc
+index a5b4e5ac..c81b8b69 100644
+--- a/googletest/src/gtest.cc
++++ b/googletest/src/gtest.cc
+@@ -3888,6 +3888,8 @@ void XmlUnitTestResultPrinter::PrintXmlUnitTest(std::ostream* stream,
+   const std::string kTestsuites = "testsuites";
+ 
+   *stream << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
++  *stream << "<?xml-stylesheet type=\"text/xsl\" href=\"gtest-result.xsl\" ?>\n";
++  *stream << "<!DOCTYPE testsuites SYSTEM \"gtest-result.dtd\">\n";
+   *stream << "<" << kTestsuites;
+ 
+   OutputXmlAttribute(stream, kTestsuites, "tests",
