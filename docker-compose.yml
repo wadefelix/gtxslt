@@ -1,0 +1,13 @@
+version: "3.9"  # optional since v1.27.0
+
+services:
+  php:
+    image: php:7.4.27-apache
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "80:80"
+    volumes:
+      - /Projects/github.com/gtxslt/:/var/www/html
