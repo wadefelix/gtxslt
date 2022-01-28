@@ -10,6 +10,17 @@ Here is the sample1's output:
 
 How To Use
 ==========
+
+M1. Insert Instructions Into Xml Files By WebServer(php)
+--------------------------------------------------
+`gtest-result.php` will do it.
+```bash
+docker-compose up -d
+```
+
+M2. Apply Patch To GoogleTest project
+-------------------------------------
+
 1. apply patch  
 2. copy `gtest-result.dtd` and `gtest-result.xsl` to your xml output dir.  
 3. build and run your test project.  
