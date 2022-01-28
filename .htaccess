@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^gtest-result/(.*\.xml)$ gtest-result.php?f=$1
+RewriteRule gtest-result/.*gtest-result.dtd /gtest-result.dtd
+RewriteRule gtest-result/.*gtest-result.xsl /gtest-result.xsl
